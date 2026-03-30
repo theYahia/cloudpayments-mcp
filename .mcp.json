@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "cloudpayments": {
+      "command": "npx",
+      "args": ["-y", "@theyahia/cloudpayments-mcp"],
+      "env": {
+        "CLOUDPAYMENTS_PUBLIC_ID": "<YOUR_PUBLIC_ID>",
+        "CLOUDPAYMENTS_API_SECRET": "<YOUR_API_SECRET>"
+      }
+    }
+  }
+}
