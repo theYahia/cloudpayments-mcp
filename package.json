@@ -1,7 +1,7 @@
 {
   "name": "@theyahia/cloudpayments-mcp",
-  "version": "2.0.0",
-  "description": "MCP server for CloudPayments API — charge, auth, confirm, void, refund, subscriptions, orders, transactions. 12 tools.",
+  "version": "2.0.1",
+  "description": "MCP server for CloudPayments — acquiring, subscriptions, refunds (Russia)",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
@@ -36,10 +36,29 @@
   },
   "mcpName": "io.github.theYahia/cloudpayments-mcp",
   "keywords": [
-    "mcp", "mcp-server", "model-context-protocol", "modelcontextprotocol",
-    "claude", "ai", "llm", "anthropic", "cursor", "ai-tools", "ai-agent",
-    "russian-api", "cloudpayments", "payment", "refund", "acquiring",
-    "subscription", "recurring", "order", "invoice"
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "claude",
+    "ai",
+    "llm",
+    "anthropic",
+    "cursor",
+    "ai-tools",
+    "ai-agent",
+    "russian-api",
+    "cloudpayments",
+    "payment",
+    "refund",
+    "acquiring",
+    "subscription",
+    "recurring",
+    "order",
+    "invoice",
+    "api",
+    "typescript",
+    "payments"
   ],
   "license": "MIT",
   "repository": {
