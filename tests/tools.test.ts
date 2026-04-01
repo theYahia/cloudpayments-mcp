@@ -4,6 +4,7 @@ vi.mock("../src/client.js", () => ({
   CloudPaymentsClient: class {
     post = vi.fn();
   },
+  getClient: () => ({ post: vi.fn() }),
 }));
 
 import { chargeSchema, authSchema, confirmSchema, voidSchema, getTransactionSchema } from "../src/tools/payments.js";

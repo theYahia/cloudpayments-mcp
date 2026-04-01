@@ -1,11 +1,11 @@
-/** Стандартный ответ CloudPayments API */
+/** Standard CloudPayments API response */
 export interface CloudPaymentsResponse<T = unknown> {
   Success: boolean;
   Message: string | null;
   Model: T;
 }
 
-/** Транзакция CloudPayments */
+/** CloudPayments transaction */
 export interface Transaction {
   TransactionId: number;
   Amount: number;
@@ -31,14 +31,52 @@ export interface Transaction {
   JsonData?: string;
 }
 
-/** Возврат CloudPayments */
+/** CloudPayments refund */
 export interface Refund {
   TransactionId: number;
   Amount: number;
   DateTime: string;
 }
 
-/** Ошибка CloudPayments */
+/** CloudPayments subscription */
+export interface Subscription {
+  Id: string;
+  AccountId: string;
+  Description: string;
+  Email?: string;
+  Amount: number;
+  Currency: string;
+  CurrencyCode: number;
+  RequireConfirmation: boolean;
+  StartDate: string;
+  StartDateIso: string;
+  IntervalCode: number;
+  Interval: string;
+  Period: number;
+  MaxPeriods?: number;
+  StatusCode: number;
+  Status: string;
+  SuccessfulTransactionsNumber: number;
+  FailedTransactionsNumber: number;
+  LastTransactionDate?: string;
+  NextTransactionDate?: string;
+}
+
+/** CloudPayments order (invoice link) */
+export interface Order {
+  Id: string;
+  Number: number;
+  Amount: number;
+  Currency: string;
+  CurrencyCode: number;
+  Email?: string;
+  Description?: string;
+  Url: string;
+  StatusCode: number;
+  Status: string;
+}
+
+/** CloudPayments error */
 export interface CloudPaymentsError {
   Success: false;
   Message: string;

@@ -1,7 +1,5 @@
 import { z } from "zod";
-import { CloudPaymentsClient } from "../client.js";
-
-const client = new CloudPaymentsClient();
+import { getClient } from "../client.js";
 
 export const refundSchema = z.object({
   TransactionId: z.number().int().positive().describe("ID транзакции для возврата"),
@@ -11,6 +9,6 @@ export const refundSchema = z.object({
 
 export async function handleRefund(params: z.infer<typeof refundSchema>): Promise<string> {
   const body: Record<string, unknown> = { ...params };
-  const result = await client.post("/payments/refund", body);
+  const result = await getClient().post("/payments/refund", body);
   return JSON.stringify(result, null, 2);
 }

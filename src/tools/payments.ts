@@ -1,8 +1,6 @@
 import { z } from "zod";
-import { CloudPaymentsClient } from "../client.js";
+import { getClient } from "../client.js";
 import type { Transaction } from "../types.js";
-
-const client = new CloudPaymentsClient();
 
 // --- Schemas ---
 
@@ -50,30 +48,30 @@ export const getTransactionSchema = z.object({
 
 export async function handleCharge(params: z.infer<typeof chargeSchema>): Promise<string> {
   const body: Record<string, unknown> = { ...params };
-  const result = await client.post<Transaction>("/payments/charge", body);
+  const result = await getClient().post<Transaction>("/payments/charge", body);
   return JSON.stringify(result, null, 2);
 }
 
 export async function handleAuth(params: z.infer<typeof authSchema>): Promise<string> {
   const body: Record<string, unknown> = { ...params };
-  const result = await client.post<Transaction>("/payments/auth", body);
+  const result = await getClient().post<Transaction>("/payments/auth", body);
   return JSON.stringify(result, null, 2);
 }
 
 export async function handleConfirm(params: z.infer<typeof confirmSchema>): Promise<string> {
   const body: Record<string, unknown> = { ...params };
-  const result = await client.post("/payments/confirm", body);
+  const result = await getClient().post("/payments/confirm", body);
   return JSON.stringify(result, null, 2);
 }
 
 export async function handleVoid(params: z.infer<typeof voidSchema>): Promise<string> {
   const body: Record<string, unknown> = { ...params };
-  const result = await client.post("/payments/void", body);
+  const result = await getClient().post("/payments/void", body);
   return JSON.stringify(result, null, 2);
 }
 
 export async function handleGetTransaction(params: z.infer<typeof getTransactionSchema>): Promise<string> {
   const body: Record<string, unknown> = { ...params };
-  const result = await client.post<Transaction>("/payments/find", body);
+  const result = await getClient().post<Transaction>("/payments/find", body);
   return JSON.stringify(result, null, 2);
 }
