@@ -132,3 +132,7 @@ Show me all transactions for yesterday and refund 2500 RUB on transaction 123456
 ## License
 
 MIT
+
+---
+
+Telegram: [@vhodvai](https://t.me/vhodvai)
