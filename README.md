@@ -1,3 +1,17 @@
+> ## 🗄 Репозиторий заархивирован
+>
+> Разработка переехала в **[theYahia/WWmcp](https://github.com/theYahia/WWmcp)** — монорепозиторий MCP-серверов для незападных API: СНГ, MENA, Африка, LATAM, Юго-Восточная Азия. Общее ядро `@theyahia/mcp-core`, единый CI, единый релизный конвейер.
+>
+> Актуальная версия того, что лежало здесь: [`servers/cloudpayments/`](https://github.com/theYahia/WWmcp/tree/main/servers/cloudpayments)
+>
+> Пакет в npm прежний — [`@theyahia/cloudpayments-mcp`](https://www.npmjs.com/package/@theyahia/cloudpayments-mcp), ставится и работает как раньше.
+> Здесь больше ничего не обновляется. Задачи и pull request'ы — в WWmcp.
+>
+> **Archived — development moved to [theYahia/WWmcp](https://github.com/theYahia/WWmcp),** a monorepo of MCP servers for non-Western APIs.
+> The current version of this package now lives at [`servers/cloudpayments/`](https://github.com/theYahia/WWmcp/tree/main/servers/cloudpayments).
+> The npm package [`@theyahia/cloudpayments-mcp`](https://www.npmjs.com/package/@theyahia/cloudpayments-mcp) is unchanged.
+> Please open issues and pull requests there.
+
 # @theyahia/cloudpayments-mcp
 
 MCP server for CloudPayments API -- one-step and two-step payments, refunds, subscriptions, orders (invoice links), transaction history. **12 tools.**
